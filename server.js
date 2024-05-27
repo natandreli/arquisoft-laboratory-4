@@ -15,7 +15,16 @@ app.prepare().then(() => {
   const io = new Server(httpServer);
 
   io.on("connection", (socket) => {
-    // ...
+    console.log("A user connected");
+
+    socket.on("updateGate", ({ gate, newInfo }) => {
+      console.log(`Updating gate ${gate} with new info`, newInfo);
+      socket.broadcast.emit("gateUpdated", { gate, newInfo });
+    });
+
+    socket.on("disconnect", () => {
+      console.log("A user disconnected");
+    });
   });
 
   httpServer
