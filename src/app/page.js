@@ -179,8 +179,6 @@ const Home = () => {
           g.gate === gate ? { ...g, ...newInfo } : g
         )
       );
-      
-      console.log(gateData);
     });
 
     return () => {

@@ -147,7 +147,7 @@ const GateInfoCard = ({ info, onUpdate }) => {
             {errors.departureTime && <span className="text-red-500">{errors.departureTime}</span>}
           </div>
           <div className="flex justify-end">
-            <button type="submit" className="bg-blue-500 text-white p-2 rounded">
+            <button type="submit" className="bg-[#5F6F94] hover:bg-opacity-75 text-white p-2 rounded">
               Guardar
             </button>
           </div>
